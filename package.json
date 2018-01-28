@@ -1,0 +1,47 @@
+{
+  "name": "ellacrypto",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "apsl-react-native-button": "^3.1.0",
+    "axios": "^0.17.1",
+    "ex-react-native-i18n": "^0.0.3",
+    "expo": "^23.0.4",
+    "prop-types": "^15.6.0",
+    "react": "16.0.0",
+    "react-currency-formatter": "^1.0.0",
+    "react-native": "0.50.3",
+    "react-native-global-props": "^1.1.3",
+    "react-native-progress": "^3.4.0",
+    "react-native-router-flux": "^4.0.0-beta.27",
+    "react-native-simple-dialogs": "^0.3.1",
+    "react-native-snackbar-dialog": "https://github.com/foggy1/react-native-snackbar-dialog/archive/upgrade-flow-type-babel.tar.gz",
+    "react-native-textinput-effects": "^0.4.2",
+    "react-native-vector-icons": "^4.5.0",
+    "sentry-expo": "^1.7.0",
+    "wallet-address-validator": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.12.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react-native": "^3.2.0",
+    "jest-expo": "24.0.0",
+    "react-native-dotenv": "^0.1.0",
+    "react-native-scripts": "1.8.1",
+    "react-test-renderer": "16.0.0"
+  }
+}

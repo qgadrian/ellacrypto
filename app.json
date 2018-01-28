@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Ella wallet monitor",
+    "slug": "ellacrypto",
+    "icon": "./icon.png",
+    "sdkVersion": "23.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "ios": {
+      "bundleIdentifier": "com.qgadrian.ellacrypto"
+    },
+    "android": {
+      "package": "com.qgadrian.ellacrypto",
+      "versionCode": 4,
+      "permissions": [
+        "CAMERA"
+      ],
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "qgadrian",
+            "project": "ella-crpyto",
+            "authToken": ""
+          }
+        }
+      ]
+    }
+  }
+}
