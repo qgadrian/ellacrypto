@@ -14,6 +14,7 @@ import { SENTRY_DSN } from 'react-native-dotenv'
 import {
   setCustomText
 } from 'react-native-global-props'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 import configureI18n from './src/constants/i18n'
 import Wallets from './src/screens/Wallets'
@@ -51,7 +52,7 @@ export default class App extends React.Component {
           key="wallets"
           component={Wallets}
           title={I18n.t('wallets.navbarTitle')}
-          rightTitle={I18n.t('navbar.addWallet')}
+          rightTitle={<Icon name="ios-add" size={25} />}
           onRight={() => Actions.addWallet()}
         />
         {/* <Scene

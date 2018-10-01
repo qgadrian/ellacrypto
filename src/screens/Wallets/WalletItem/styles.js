@@ -13,11 +13,12 @@ const styles = StyleSheet.create({
     borderColor: colors.primary,
     overflow: 'hidden',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   alias: {
     color: colors.primaryText,
-    fontWeight:'bold',
+    fontWeight: 'bold',
+    marginBottom: 4,
   },
   address: {
     fontStyle: 'italic',
@@ -26,6 +27,7 @@ const styles = StyleSheet.create({
   },
   walletInfo: {
     flex: 1.5,
+    marginRight: 8,
   },
   walletBalance: {
     flex: 1,
@@ -34,6 +36,7 @@ const styles = StyleSheet.create({
   icoBalance: {
     fontSize: 12,
     color: colors.primaryText,
+    marginBottom: 4,
   },
   fiatBalance: {
     color: colors.primaryText,

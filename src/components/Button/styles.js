@@ -13,6 +13,8 @@ const styles = StyleSheet.create({
   },
   primaryText: {
     borderColor: colors.primaryText,
+    fontSize: 18,
+    fontFamily: 'HelveticaNeue-Light',
   },
   secondary: {
     borderColor: colors.primary,
@@ -24,6 +26,8 @@ const styles = StyleSheet.create({
   },
   secondaryText: {
     color: colors.primary,
+    fontSize: 18,
+    fontFamily: 'HelveticaNeue-Light',
   }
 })
 

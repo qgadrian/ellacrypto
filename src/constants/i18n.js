@@ -8,7 +8,7 @@ export default function configureI18n() {
     en: {
       navbar: {
         changeWallet: 'Wallets',
-        addWallet: 'Add wallet',
+        addWallet: '+',
       },
       wallets: {
         navbarTitle: 'Wallets',
@@ -23,7 +23,21 @@ export default function configureI18n() {
         bitcoin: {
           symbol: 'BTC'
         }
-      }
+      },
+      addWallet: {
+        title: "Your wallet address for...",
+        input: {
+          placeholder: "Scan or write your wallet address...",
+          addButton: {
+            text: "Add wallet",
+            accessibility: "Add wallet address to starting monitoring",
+          },
+          scanQRButton: {
+            text: "Scan QR",
+            accessibility: "Scan wallet address as a QR code",
+          }
+        }
+      },
     },
     es: {
       walletInfo: {

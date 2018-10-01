@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
   StyleSheet,
-  // AsyncStorage,
   View,
   Text,
   TextInput,
@@ -10,10 +9,11 @@ import {
 } from 'react-native'
 import { Camera, Permissions } from 'expo'
 import { Actions } from "react-native-router-flux"
-// import Button from 'apsl-react-native-button'
 import { Kohana } from 'react-native-textinput-effects'
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
 import SnackBar from 'react-native-snackbar-dialog'
+import I18n from 'ex-react-native-i18n'
+import ModalDropdown from 'react-native-modal-dropdown'
 
 import { WALLETS } from 'ellacrypto/src/constants/storageKeys'
 import { WALLET_EXIST, WALLET_ADDED } from 'ellacrypto/src/constants/status'
@@ -23,6 +23,7 @@ import { styles as baseStyles } from 'ellacrypto/src/constants/styles'
 import { addWallet } from 'ellacrypto/src/services/storage/wallets'
 import Button from 'ellacrypto/src/components/Button'
 import { colors } from 'ellacrypto/src/constants/styles'
+import * as ico from 'ellacrypto/src/constants/ico'
 
 
 export default class AddWallet extends Component {
@@ -73,33 +74,39 @@ export default class AddWallet extends Component {
     // />
     return (
       <View style={baseStyles.container}>
-        <Text style={baseStyles.title}>#Your  wallet address for...#</Text>
-        <Text style={styles.cryptoTitle}>{this.state.walletCrypto}</Text>
+        <Text style={baseStyles.title}>{I18n.t('addWallet.title')}</Text>
+        {/* <Text style={styles.cryptoTitle}>{this.state.walletCrypto}</Text> */}
+        <ModalDropdown
+          options={[ico.BITCOIN, ico.ETHEREUM, ico.IOTA]}
+          defaultValue="#Scan a code or select the ico#"
+          onSelect={walletCrypto => { this.setState({ walletCrypto }) }}
+        />
         <Kohana
           style={styles.walletAddressInput}
           onChangeText={(walletAddress) => this.setState({ walletAddress })}
-          label={'#Scan your address...#'}
+          label={I18n.t('addWallet.input.placeholder')}
+          labelStyle={styles.walletAddressInputLabel}
           iconClass={FontAwesomeIcon}
           iconName={'credit-card'}
           iconColor={colors.bitcoin}
+          iconSize={10}
           inputStyle={{ color: colors.bitcoin }}
-          iconSize={20}
           useNativeDriver
           value={this.state.walletAddress}
-        />
-        <Button
-          type="primary"
-          disabled={!this.state.walletAddress}
-          onPress={this.navigateToWalletBalanceView}
-          text="#Add wallet#"
-          accessibilityLabel="Add wallet address to starting monitoring"
         />
         <Button
           type="secondary"
           // disabled={!this.state.walletAddress}
           onPress={() => Actions.scanWalletAsQR()}
-          text="#Scan QR#"
-          accessibilityLabel="Scan wallet address as a QR code"
+          text={I18n.t('addWallet.input.scanQRButton.text')}
+          accessibilityLabel={I18n.t('addWallet.input.scanQRButton.accessibility')}
+        />
+        <Button
+          type="primary"
+          disabled={!this.state.walletAddress}
+          onPress={this.navigateToWalletBalanceView}
+          text={I18n.t('addWallet.input.addButton.text')}
+          accessibilityLabel={I18n.t('addWallet.input.addButton.accessibility')}
         />
       </View>
     )

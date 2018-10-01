@@ -3,7 +3,7 @@
     "name": "Ella wallet monitor",
     "slug": "ellacrypto",
     "icon": "./icon.png",
-    "sdkVersion": "23.0.0",
+    "sdkVersion": "25.0.0",
     "orientation": "portrait",
     "primaryColor": "#cccccc",
     "ios": {
@@ -23,7 +23,7 @@
           "config": {
             "organization": "qgadrian",
             "project": "ella-crpyto",
-            "authToken": ""
+            "authToken": "d1dd4f4ca1854012a9f2ccbfb21c62c1f23e0cc097b24297a9890ea884bb0d7a"
           }
         }
       ]
